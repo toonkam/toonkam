@@ -1,60 +1,5 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<script type="text/javascript">
-var imgUrl = 'http://toonkam.com/images/touxiang-s.png';
-var lineLink = 'http://toonkam.com';
-var descContent = "toonkam.com，黄循鑫（老痛）的个人网页";
-var shareTitle = '黄循鑫|@老痛|ToonKam';
-var appid = '';
-function shareFriend() {
-WeixinJSBridge.invoke('sendAppMessage',{
-"appid": appid,
-"img_url": imgUrl,
-"img_width": "85",
-"img_height": "85",
-"link": lineLink,
-"desc": descContent,
-"title": shareTitle
-}, function(res) {
-//_report('send_msg', res.err_msg);
-})
-}
-function shareTimeline() {
-WeixinJSBridge.invoke('shareTimeline',{
-"img_url": imgUrl,
-"img_width": "85",
-"img_height": "85",
-"link": lineLink,
-"desc": descContent,
-"title": shareTitle
-}, function(res) {
-//_report('timeline', res.err_msg);
-});
-}
-function shareWeibo() {
-WeixinJSBridge.invoke('shareWeibo',{
-"content": descContent,
-"url": lineLink,
-}, function(res) {
-//_report('weibo', res.err_msg);
-});
-}
-// 当微信内置浏览器完成内部初始化后会触发WeixinJSBridgeReady事件。
-document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
-// 发送给好友
-WeixinJSBridge.on('menu:share:appmessage', function(argv){
-shareFriend();
-});
-// 分享到朋友圈
-WeixinJSBridge.on('menu:share:timeline', function(argv){
-shareTimeline();
-});
-// 分享到微博
-WeixinJSBridge.on('menu:share:weibo', function(argv){
-shareWeibo();
-});
-}, false);
-</script> 
 <head>
 	<meta name="viewport" content="width=device-width" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -73,17 +18,23 @@ shareWeibo();
 <h1 id="logo">
 	<a href="http://toonkam.com/"><img alt="黄循鑫，笔名：老痛，英文名：Wong Toon Kam" src="images/touxiang-s.png"></a>
 </h1>
-<p style="text-align: center">黄循鑫 · 海南话音：Wong Toon Kam · 笔名：老痛</p>
-
-<h2>我的近况</h2>
+<p style="text-align: center">感谢相识，相信缘份</p>
+<h2>朋友你好！&nbsp;</h2>
 <p>
-	感谢各位朋友关注到我。我依然在TMT这个圈子里，在做<b>新媒体、广告传媒和互联网技术相关</b>的业务。自2020年起，用传媒公司参股了一家<b>法律服务</b>公司的事情，在做<b>传媒与法律服务结合</b>的事情。各位朋友有法律方面的事情尽管可以咨询。
+	感谢关注到我。我是黄循鑫（英文名：Wong Toon Kam，笔名：老痛）我依然在<strong>TMT</strong>这个圈子里，在做<strong>新媒体、广告传媒和互联网技术相关</strong>的业务，<a href="#about">20年的经验</a>值得信赖。自2020年起，我用传媒公司参股了一家<b>法律服务</b>公司的事情，在做<b>传媒与法律服务结合</b>的事情，新方式解决新老问题。
 </p>
-<p>
-	欢迎关注我的个人公众号：“紫贝山房”，关注后在对话框里发送“资料”二字，可以看到我共享在网盘里的好东西。
-</p>
-<p style="text-align: right">&#8212; 2020.3.10 在海口更新</p>
-
+<div style="float:left;margin-left:1px;display:inline;padding-top:0px;width: 380px"><h3>我们羽明传媒承接以下业务：</h3>
+<p>· 全媒体广告的制作与发布。包括创意设计，包括软文和硬广，包括图文、视频等形式，包括传统媒体与新媒体联动等。 </p>
+<p>· 海南西线高速公路的桥梁巨幅广告牌。海南省高端楼宇电梯间视频广告。广东省惠州市电梯厢内图文广告。</p>
+<p>· 海南、四川的文化体育活动、会展策划与执行。</p>
+<p>· 互联网产品规划、技术咨询与技术开发，包括传统网络应用开发、APP开发、微信公众号与小程序深度开发等。</p>
+	<h3>我们经联法律团队承接以下业务：</h3>
+<p>· 各类法律事务咨询，代理诉讼或非诉讼法律事务。</p>
+<p>· 主持调解纠纷服务，代理委托申请各类司法签定，代理当事人处理交通事故。</p>
+<p>· 作为法律顾问单位，为经营者提供投资行为以及企业管理行为的合规化咨询服务。 </p>
+<p style="text-align: right">&#8212; 2020.3.11 在海口更新</p></div></div>
+<div style="padding-top:5px;float:right;padding-right:3px;"><img src="images/yumingchuanmei-s.png" border="0" width="280">
+</div>
 <h2>我的近文</h2>
 <div style="float:left;margin-left:1px;display:inline;padding-top:0px">
 	<p>2020.3.2 &nbsp;&nbsp;·<a href="https://mp.weixin.qq.com/s/ze8lgakgb_1StDS8mYTg1g" target="_blank">海航的余生，还能那么“野”吗？</a>
@@ -104,11 +55,11 @@ shareWeibo();
 </p>
 </div>
 <div style="padding-top:5px;float:right;padding-right:3px;">
-<p style="text-align: center">因为我是在中国写作<br>所以有些文章要<font color=red><b>细细品</b></font><br>更多文章请关注我的微信公众号
+<p style="text-align: center">中国的文章要<font color=red><b>细细品</b></font><br>更多文章请关注我的微信公众号<br>原创不易，感谢打赏！
 </p>
 <p><img src="images/zibeiqrcode.jpg" width="200" style="border:1px double #cccccc"></p>
 	</div>
-<h2>我的简介</h2>
+<h2 id="about">我的简介</h2>
 <p class="p1">黄循鑫，网名：老痛。1978年生，海南文昌人。毕业于吉林大学法学院。历任天涯社区站长、南海网新闻总监、海南在线总经理。2012年正式创业至今，历任拍拍看公司联合创始人兼CEO、盛世龙媒创始人董事长、甘霖科技集团总裁等。现为羽明传媒公司创始人、总裁，兼任经联法律服务公司合伙人。曾兼任海南省旅游委信息顾问兼旅游门户平台总编、新闻出版署培训中心特约TMT课程讲师、中央纪委及海南纪委网络舆情培训讲师。现兼任海南省人力资源开发局创业导师、海南日报众创空间创业导师、海南省发改委培训中心高级讲师、美国格理咨询集团（GLG）专家团成员、世界研学游组织（WRTO）专家团成员等职。
 </p>
 <p>
@@ -116,8 +67,9 @@ shareWeibo();
 </p>
 <h3>联系方式</h3>
 <p>Email：1616645@QQ.com<br>
-	微信：toonkam<br>
+	微信/手机：18608931608<br>
 	Facebook：toonkam@gmail.com<br>
+	微博：@老痛<br>
 </p>
 <p style="text-align: center;color:#a59292">Copyright &copy; 2020 黄循鑫<br>www.toonkam.com</p>
 </body>
