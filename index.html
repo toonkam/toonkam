@@ -61,6 +61,12 @@ shareWeibo();
 	<title>黄循鑫 | @老痛 | ToonKam</title>
 	<meta data-n-head="true" data-hid="description" name="description" content="黄循鑫的个人网页">
 	<link rel="stylesheet" href="tk.css" type="text/css" />
+	    <style>
+        .a-text { font-size: 14px;color: #0073aa;cursor: pointer;}
+        .a-text:hover { color: red;}
+        .p1 {font-size: 14px;}
+        .p2 {font-size: 14px;display: none;  }
+    </style>
 </head>
 <body>
 <h1 id="logo">
@@ -78,15 +84,49 @@ shareWeibo();
 <p style="text-align: right">&#8212; 2020.3.10 在海口更新</p>
 
 <h2>我的近文</h2>
-<p>·2020.3.2&nbsp; &#8212;  <a href="https://mp.weixin.qq.com/s/ze8lgakgb_1StDS8mYTg1g" target="_blank">海航的余生，还能那么“野”吗？</a>
+<p>·2020.3.2 &nbsp;&nbsp;·<a href="https://mp.weixin.qq.com/s/ze8lgakgb_1StDS8mYTg1g" target="_blank">海航的余生，还能那么“野”吗？</a>
 </p>
-<p>·2020.3.21&#8212; <a href="https://mp.weixin.qq.com/s/ze8lgakgb_1StDS8mYTg1g" target="_blank">海航的余生，还能那么“野”吗？</a>
+<p>·2020.2.28&nbsp;·<a href="https://mp.weixin.qq.com/s/2r-QCMUmmmG0_IrqGaDiQQ" target="_blank">一个人寂寞吗？不闲聊可以直接约会！</a>
+</p>
+<p>·2020.2.27&nbsp;·<a href="https://mp.weixin.qq.com/s/dmzpzgq7KGET8zu0G4oR6A" target="_blank">阿里再战社交，“Real如我”APP能赢吗？</a>
+</p>
+<p>·2020.2.21&nbsp;·<a href="https://mp.weixin.qq.com/s/KLPKDNu-Tu9UaFffd93plg" target="_blank">英雄的画像：真实的英雄不像英雄</a>
+</p>
+<p>·2020.2.19&nbsp;·<a href="https://mp.weixin.qq.com/s/fJ0aRgCX4kBeYLDVgHCb-w" target="_blank">可怜的，来抱抱，抱抱不要钱！</a>
 </p>
 <h2>我的简介</h2>
-<p>黄循鑫，网名：老痛。1978年生，海南文昌人。毕业于吉林大学法学院。历任天涯社区站长、南海网新闻总监、海南在线总经理。2012年正式创业至今，历任拍拍看公司联合创始人兼CEO、盛世龙媒创始人董事长、甘霖科技集团总裁等。现为羽明传媒公司创始人、总裁，兼任经联法律服务公司合伙人。曾兼任海南省旅游委信息顾问兼旅游门户平台总编、新闻出版署培训中心特约TMT课程讲师、中央纪委及海南纪委网络舆情培训讲师。现兼任海南省人力资源开发局创业导师、海南日报众创空间创业导师、海南省发改委培训中心高级讲师、美国格理咨询集团（GLG）专家团成员、世界研学游组织（WRTO）专家团成员等职。
+<p class="p1">黄循鑫，网名：老痛。1978年生，海南文昌人。毕业于吉林大学法学院。历任天涯社区站长、南海网新闻总监、海南在线总经理。2012年正式创业至今，历任拍拍看公司联合创始人兼CEO、盛世龙媒创始人董事长、甘霖科技集团总裁等。现为羽明传媒公司创始人、总裁，兼任经联法律服务公司合伙人。曾兼任海南省旅游委信息顾问兼旅游门户平台总编、新闻出版署培训中心特约TMT课程讲师、中央纪委及海南纪委网络舆情培训讲师。现兼任海南省人力资源开发局创业导师、海南日报众创空间创业导师、海南省发改委培训中心高级讲师、美国格理咨询集团（GLG）专家团成员、世界研学游组织（WRTO）专家团成员等职。
 </p>
 <p>
 	很多朋友都会问，为什么业界的朋友都叫我“老痛”。其实“老痛”跟心里痛不痛没有任何关系。因为家穷，上学时是马来西亚的华侨、我的叔公资助，他给我起的英文名是Wong Toon Kam，就是我名字的海南话音，这也是我使用了很久的英文名。有些朋友用键盘打ToonKam的时候会打成“痛卡姆”。2001年，北京的一位律师朋友就开始喊我“老痛”。于是我干脆到处注册的网名都叫“老痛”，并以此为笔名发表文章或者写书法作品。
 </p>
 </body>
+<script src="https://cdn.bootcss.com/jquery/2.1.2/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        text_foled('.p1', 150);
+    });
+
+    /**
+     * jQuery 文本折叠展开特效
+     * @param clas：存放文本的容器
+     * @param num：要显示的字数
+     */
+    function text_foled(clas, num) {
+        var num = num;
+        var a = $("<a></a>").on('click', showText).addClass('a-text').text("【展开】");
+        var b = $("<a></a>").on('click', showText).addClass('a-text').text("【折叠】");
+        var p = $("<p></p>").addClass('p2');
+        var str = $(clas).text();
+        $(clas).after(p);
+        if (str.length > num) {
+            var text = str.substring(0, num) + "...";
+            $(clas).html(text).append(a);
+        }
+        $('.p2').html(str).append(b);
+        function showText() {
+            $(this).parent().hide().siblings().show();
+        }
+    }
+</script>
 </html>
